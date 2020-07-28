@@ -1,0 +1,55 @@
+$dark: #1a1a1a;
+
+footer {
+  background-color: $dark;
+  height: 300px;
+  color: #fff;
+  .logo-row {
+    padding: 20px 0;
+    border-bottom: 1px solid #747474;
+  }
+  .logo img {
+    height: 40px;
+  }
+  .f-info-row {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .f-input-container {
+    padding: 10px 0;
+    input[type="text"] {
+      padding: 10px 15px;
+      padding-top: 9px;
+      width: 200px;
+      background: transparent;
+      border: 1px solid #747474;
+      border-right: none;
+      color: #fff;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border: 1px solid #fff;
+    }
+    button {
+      background-color: transparent;
+      padding: 11px 15px;
+      border: 1px solid #747474;
+
+      color: #fff;
+      font-size: 0.7rem;
+    }
+    button:hover {
+      border-color: #fff;
+    }
+  }
+
+  .f-contact {
+    font-size: 0.8em;
+    .contact-week {
+      margin-top: 10px;
+    }
+  }
+}

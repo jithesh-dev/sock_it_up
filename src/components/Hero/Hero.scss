@@ -1,0 +1,24 @@
+@import "../../designTokens/scsss-variables.scss";
+
+.hero {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  h1 {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}

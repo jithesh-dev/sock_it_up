@@ -1,0 +1,28 @@
+$dark: #1a1a1a;
+
+header {
+  background-color: $dark;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    color: rgb(194, 194, 194);
+    font-size: 0.8em;
+  }
+  a:hover {
+    color: #fff;
+  }
+  nav {
+    a {
+      padding: 0 10px;
+    }
+  }
+
+  .logo {
+    img {
+      height: 50px;
+    }
+  }
+}
