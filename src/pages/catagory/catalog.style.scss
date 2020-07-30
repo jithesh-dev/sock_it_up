@@ -1,0 +1,74 @@
+@import "../../designTokens/scsss-variables.scss";
+
+.catalog__title {
+  text-transform: uppercase;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 80px;
+}
+.catalog__subtitle {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  text-align: center;
+  color: #707070;
+}
+
+.productGrid {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 0px;
+  column-gap: 20px;
+  row-gap: 50px;
+  justify-content: center;
+}
+
+.product {
+  cursor: pointer;
+}
+
+.product:hover > .product__info > .product__button {
+  fill: rgb(65, 136, 228);
+}
+.product:hover > .product__image {
+  background: hsla(0, 0%, 94%, 0.9);
+}
+
+.product__image {
+  background: hsla(0, 0%, 97%, 0.9);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 400px;
+  transition: all 0.3s ease-out;
+}
+.product__image > img {
+  max-width: 400px;
+  width: 70%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.product__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.product__catagory {
+  color: $light-text;
+  font-size: 0.7em;
+}
+.product__name {
+  font-weight: 600;
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+}
+.product__button {
+  fill: #707070;
+  width: 20px;
+  height: 20px;
+
+  transition: all 0.3s ease-out;
+}

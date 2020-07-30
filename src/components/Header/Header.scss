@@ -25,4 +25,21 @@ header {
       height: 50px;
     }
   }
+  .sec-nav {
+    display: flex;
+  }
+  .header__link {
+    display: flex;
+    align-items: center;
+  }
+  .header__icon {
+    fill: rgb(194, 194, 194);
+    width: 18px;
+    margin: 0 10px;
+    transition: all 0.2s ease-in-out;
+    stroke-width: 2px;
+  }
+  .header__icon:hover {
+    fill: #fff;
+  }
 }

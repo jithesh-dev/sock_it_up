@@ -1,7 +1,7 @@
 import React from "react";
-// import HeroImage from "../assets/img/Lobster-Hero.jpg";
 import HeroImage from "../../assets/img/Lobster-Hero.jpg";
 import "./Hero.scss";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -12,7 +12,9 @@ function Hero() {
       <div class="hero-text">
         <h1>RAMONES</h1>
         <h3 class="subtitle">RESPECT TO THE GODFATHERS OF PUNK</h3>
-        <button class="btn no-bg-btn">Shop the Collection</button>
+        <Link to="/catalog/ramones" class="btn no-bg-btn">
+          Shop the Collection
+        </Link>
       </div>
     </section>
   );

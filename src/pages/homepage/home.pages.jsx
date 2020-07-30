@@ -6,7 +6,7 @@ import FeaturedImageOne from "../../assets/img/featured-1.jpg";
 import FeaturedImageTwo from "../../assets/img/featured-2.jpg";
 import FeaturedImageThree from "../../assets/img/featured-3.jpg";
 import FeaturedImageFour from "../../assets/img/featured-4.jpg";
-
+import { Link } from "react-router-dom";
 function HomePage() {
   return (
     <div className="home">
@@ -17,10 +17,30 @@ function HomePage() {
           <h3>Collections</h3>
         </div>
         <div className="card-container">
-          <Card title="Pixar Collection" imageUrl={FeaturedImageOne} />
-          <Card title="Hysteria Collection" imageUrl={FeaturedImageTwo} />
-          <Card title="Stance Collection" imageUrl={FeaturedImageThree} />
-          <Card title="Bombai Collection" imageUrl={FeaturedImageFour} />
+          <Link to="/catalog/pixar">
+            <Card
+              title="Pixar"
+              subtitle="Collection"
+              imageUrl={FeaturedImageOne}
+            />
+          </Link>
+          <Link to="/catalog/hysteria">
+            <Card
+              title="Hysteria"
+              subtitle="Collection"
+              imageUrl={FeaturedImageTwo}
+            />
+          </Link>
+          <Card
+            title="Stance"
+            subtitle="Collection"
+            imageUrl={FeaturedImageThree}
+          />
+          <Card
+            title="Bombai"
+            subtitle="Collection"
+            imageUrl={FeaturedImageFour}
+          />
         </div>
       </section>
     </div>
