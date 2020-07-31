@@ -17,30 +17,62 @@ function HomePage() {
           <h3>Collections</h3>
         </div>
         <div className="card-container">
-          <Link to="/catalog/pixar">
+          <Link
+            to={{
+              pathname: "/catalog/pixar",
+              state: {
+                subtitle: "SPRING / SUMMER 2020",
+              },
+            }}
+          >
             <Card
               title="Pixar"
               subtitle="Collection"
               imageUrl={FeaturedImageOne}
             />
           </Link>
-          <Link to="/catalog/hysteria">
+          <Link
+            to={{
+              pathname: "/catalog/hysteria",
+              state: {
+                subtitle: "SPRING / SUMMER 2020",
+              },
+            }}
+          >
             <Card
               title="Hysteria"
               subtitle="Collection"
               imageUrl={FeaturedImageTwo}
             />
           </Link>
-          <Card
-            title="Stance"
-            subtitle="Collection"
-            imageUrl={FeaturedImageThree}
-          />
-          <Card
-            title="Bombai"
-            subtitle="Collection"
-            imageUrl={FeaturedImageFour}
-          />
+          <Link
+            to={{
+              pathname: "/catalog/stance",
+              state: {
+                subtitle: "SPRING / SUMMER 2020",
+              },
+            }}
+          >
+            <Card
+              title="Stance"
+              subtitle="Collection"
+              imageUrl={FeaturedImageThree}
+            />
+          </Link>
+          <Link
+            to={{
+              pathname: "/catalog/bombai",
+              state: {
+                subtitle: "SPRING / SUMMER 2020",
+              },
+            }}
+          >
+            <Card
+              title="Bombai"
+              subtitle="Collection"
+              imageUrl={FeaturedImageFour}
+            />
+          </Link>
         </div>
       </section>
     </div>

@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CatalogPage from "./pages/catagory/catalog.pages";
 import ScrollToTop from "./components/ScrollToTop";
+import Checkout from "./pages/checkout/checkout.pages";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
         <Header />
         <Switch>
           <Route path="/catalog/:collection" children={<CatalogPage />} />
-          <Route path="/checkout"></Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
           <Route path="/login"></Route>
           <Route path="/">
             <HomePage />

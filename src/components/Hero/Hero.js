@@ -6,13 +6,21 @@ import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section
-      class="container hero"
+      className="container hero"
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
-      <div class="hero-text">
+      <div className="hero-text">
         <h1>RAMONES</h1>
         <h3 class="subtitle">RESPECT TO THE GODFATHERS OF PUNK</h3>
-        <Link to="/catalog/ramones" class="btn no-bg-btn">
+        <Link
+          className="btn no-bg-btn"
+          to={{
+            pathname: "/catalog/ramones",
+            state: {
+              subtitle: "RESPECT TO THE GODFATHERS OF PUNK",
+            },
+          }}
+        >
           Shop the Collection
         </Link>
       </div>

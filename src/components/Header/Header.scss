@@ -7,6 +7,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
   a {
     color: rgb(194, 194, 194);
     font-size: 0.8em;
