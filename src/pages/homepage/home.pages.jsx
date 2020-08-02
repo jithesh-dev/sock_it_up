@@ -6,7 +6,9 @@ import FeaturedImageOne from "../../assets/img/featured-1.jpg";
 import FeaturedImageTwo from "../../assets/img/featured-2.jpg";
 import FeaturedImageThree from "../../assets/img/featured-3.jpg";
 import FeaturedImageFour from "../../assets/img/featured-4.jpg";
+import Product from "../../components/Product/Product";
 import { Link } from "react-router-dom";
+import { sockCollection } from "../../data/data";
 function HomePage() {
   return (
     <div className="home">
@@ -73,6 +75,50 @@ function HomePage() {
               imageUrl={FeaturedImageFour}
             />
           </Link>
+        </div>
+      </section>
+      <section className="row container">
+        <div className="featured-title">
+          <h1>Trending</h1>
+          <h3>Now</h3>
+        </div>
+        <div className="card-container">
+          {sockCollection
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 4)
+            .map((product) => (
+              <Product
+                key={product.id}
+                id={product.id}
+                gender={product.gender}
+                name={product.name}
+                price={product.price}
+                catagory={product.catagory}
+                image_1={product.image_1}
+              />
+            ))}
+        </div>
+      </section>
+      <section className="row container">
+        <div className="featured-title">
+          <h1>STAR WARS™</h1>
+          <h3>THE EMPIRE STRIKES BACK</h3>
+        </div>
+        <div className="card-container">
+          {sockCollection
+            .filter((product) => product.catagory === "Star Wars infiknit")
+            .slice(0, 4)
+            .map((product) => (
+              <Product
+                key={product.id}
+                id={product.id}
+                gender={product.gender}
+                name={product.name}
+                price={product.price}
+                catagory={product.catagory}
+                image_1={product.image_1}
+              />
+            ))}
         </div>
       </section>
     </div>
