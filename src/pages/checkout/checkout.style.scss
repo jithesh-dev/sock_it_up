@@ -1,3 +1,41 @@
+@import "../../designTokens/scsss-variables.scss";
 .checkout {
-  min-height: 80vh;
+  min-height: 60vh;
+  margin: 50px 0;
+  display: flex;
+}
+.checkout__title {
+  font-size: 4em;
+  text-transform: uppercase;
+}
+.checkout__backLink {
+  display: flex;
+  align-content: center;
+  gap: 10px;
+  font-size: 0.8em;
+}
+.checkout__backLink > svg {
+  transform: translateX(5px);
+  width: 12px;
+  transition: all 0.2s ease-in-out;
+}
+.checkout__backLink:hover > svg {
+  transform: translateX(0);
+}
+
+.checkout__orderContainer {
+  margin-top: 100px;
+}
+.checkout__leftside {
+  min-width: 50%;
+}
+.checkout__rightside {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.emptyCartCard {
+  padding: 20px 20px;
+  border: 1px solid $border-col;
+  background-color: rgb(248, 248, 248);
 }

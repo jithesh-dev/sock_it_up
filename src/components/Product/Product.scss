@@ -1,6 +1,6 @@
 @import "../../designTokens/scsss-variables.scss";
 .product {
-  cursor: pointer;
+  // cursor: pointer;
 }
 
 .product:hover > .product__info > .product__button {
@@ -40,6 +40,7 @@
   letter-spacing: 0.08em;
 }
 .product__button {
+  cursor: pointer;
   fill: #707070;
   width: 20px;
   height: 20px;

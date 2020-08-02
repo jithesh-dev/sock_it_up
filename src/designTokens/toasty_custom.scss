@@ -1,0 +1,17 @@
+@import "./scsss-variables.scss";
+// Toastify
+
+.Toastify__toast--dark {
+  background-color: $dark;
+}
+
+.Toastify__toast-container--top-right {
+  top: 6em;
+}
+
+.Toastify__toast {
+  padding: 11px;
+  border-radius: 3px;
+  font-family: unset;
+  font-size: 0.8em;
+}

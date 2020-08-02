@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import Logo from "../../assets/img/logo.png";
 import { ReactComponent as ShoppingCartIcon } from "../../assets/svg/shopping-cart.svg";
@@ -9,6 +9,7 @@ import { ReactComponent as AccountIcon } from "../../assets/svg/profile.svg";
 
 function Header() {
   const [{ basket }] = useStateValue();
+  const location = useLocation();
 
   return (
     <header className="container">
@@ -64,7 +65,16 @@ function Header() {
         <Link to="#" className="header__link">
           <SearchIcon className="header__icon" />
         </Link>
-        <Link to="/checkout" className="header__link">
+        <Link
+          to={{
+            pathname: "/checkout",
+            state: {
+              from: location.pathname,
+              gender: location.gender,
+            },
+          }}
+          className="header__link"
+        >
           <ShoppingCartIcon className="header__icon" />
           <span className="header__cartCount">{basket?.length}</span>
         </Link>

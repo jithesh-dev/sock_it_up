@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
 @import "./designTokens/scsss-variables.scss";
+
 *,
 :before,
 :after {
@@ -29,6 +30,12 @@ a {
   padding: 20px 25px;
   border: none;
   cursor: pointer;
+  background-color: $dark;
+  color: #fff;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.btn:hover {
+  background-color: lighten($dark, 5%);
 }
 
 .no-bg-btn {
@@ -36,7 +43,7 @@ a {
   border: 2px solid #fff;
   color: #fff;
   font-size: 1rem;
-  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  // transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .no-bg-btn:hover {

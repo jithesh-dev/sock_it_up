@@ -1,13 +1,15 @@
-$dark: #1a1a1a;
+@import "../../designTokens/scsss-variables.scss";
 
 header {
-  background-color: $dark;
   width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: -webkit-sticky; /* Required for Safari */
   position: sticky;
+  z-index: 99;
+  background-color: $dark;
   top: 0;
   a {
     color: rgb(194, 194, 194);
@@ -33,6 +35,7 @@ header {
   .header__link {
     display: flex;
     align-items: center;
+    position: relative;
   }
   .header__icon {
     fill: rgb(194, 194, 194);
@@ -45,3 +48,21 @@ header {
     fill: #fff;
   }
 }
+
+// .header__notification {
+//   padding: 20px;
+//   text-align: center;
+//   background-color: $dark;
+//   color: #fff;
+//   position: absolute;
+//   top: 70px;
+//   right: 20px;
+//   border-radius: 5px;
+//   width: 250px;
+//   opacity: 0;
+//   transition: all 0.2s ease-in-out;
+// }
+
+// .header__notification.show {
+//   opacity: 1;
+// }

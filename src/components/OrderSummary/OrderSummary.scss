@@ -1,0 +1,19 @@
+@import "../../designTokens/scsss-variables.scss";
+.cartSummary {
+  margin-top: 30px;
+  height: fit-content;
+  border: 1px solid $border-col;
+  padding: 20px 60px;
+}
+.cartSummary__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.cartSummary__label {
+  width: 150px;
+  color: $light-text;
+}
+.cartSummary__btn {
+  margin-top: 30px;
+  width: 100%;
+}

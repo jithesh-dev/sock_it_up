@@ -11,7 +11,7 @@ function Hero() {
     >
       <div className="hero-text">
         <h1>RAMONES</h1>
-        <h3 class="subtitle">RESPECT TO THE GODFATHERS OF PUNK</h3>
+        <h3 className="subtitle">RESPECT TO THE GODFATHERS OF PUNK</h3>
         <Link
           className="btn no-bg-btn"
           to={{

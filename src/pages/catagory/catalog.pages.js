@@ -1,24 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router";
-import "./catalog.style.scss";
 import { sockCollection } from "../../data/data";
 import Product from "../../components/Product/Product";
+import "./catalog.style.scss";
 
 function CatalogPage() {
   let { collection } = useParams();
   const location = useLocation();
   const [filteredSocks, setFilteredSocks] = useState([]);
+
   useEffect(() => {
     setFilteredSocks(
       sockCollection.filter((product) => {
         if (collection.toUpperCase() === "DISCOVER") return product;
 
-        if (location?.state?.gender)
+        if (
+          location?.state?.gender ||
+          ["men", "women", "kids"].includes(collection.toLowerCase())
+        ) {
           return (
             product.gender.toUpperCase() ===
-            location?.state?.gender.toUpperCase()
+            (location?.state?.gender
+              ? location.state.gender
+              : collection
+            ).toUpperCase()
           );
-        else if (collection)
+        } else if (collection)
           return product.catagory.toUpperCase() === collection.toUpperCase();
         return 0;
       })
