@@ -16,7 +16,6 @@ export const initialState = {
     },
   ],
   user: null,
-  // notification: "",
 };
 
 export const getBasketTotal = (basket) =>

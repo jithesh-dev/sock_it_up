@@ -1,13 +1,18 @@
 @import "../../designTokens/scsss-variables.scss";
 
 .hero {
-  background-position: center center;
+  background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
   height: 70vh;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   color: #fff;
+  .hero-text {
+    text-align: right;
+    color: $dark;
+  }
   h1 {
     font-size: 6rem;
     font-weight: 600;
@@ -21,5 +26,12 @@
   .btn {
     margin-top: 20px;
     display: inline-block;
+    // color: $dark;
+    background: $dark;
+    border: none;
+  }
+  .btn:hover {
+    color: $dark;
+    background-color: #fff;
   }
 }

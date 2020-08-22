@@ -14,7 +14,7 @@ function Checkout() {
     <div className="checkout container">
       <div className="checkout__leftside">
         <h1 className="checkout__title">Shopping Bag</h1>
-        <Link className="checkout__backLink" to={location.state.from}>
+        <Link className="checkout__backLink" to={location?.state?.from}>
           <Arrow />
           Continue Shopping
         </Link>

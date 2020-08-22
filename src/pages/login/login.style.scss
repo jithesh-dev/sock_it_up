@@ -1,0 +1,36 @@
+@import "../../designTokens/scsss-variables.scss";
+.login {
+  width: 100%;
+  min-height: 55vh;
+  display: flex;
+  margin: 110px 0;
+  justify-content: center;
+}
+.login__leftside {
+  max-width: 500px;
+}
+
+.login__rightside {
+  padding-left: 40px;
+  max-width: 450px;
+}
+.login__title {
+  font-size: 1.5em;
+}
+.login__text {
+  font-size: 0.8em;
+}
+.login__signinForm {
+  margin-top: 30px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  border-right: 1px solid rgb(216, 216, 216);
+}
+.login__input {
+  width: 100%;
+  margin-bottom: 20px !important;
+}
+.login__signinBtn {
+  margin-top: 20px;
+  width: 100%;
+}

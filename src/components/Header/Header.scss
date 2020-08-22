@@ -49,20 +49,11 @@ header {
   }
 }
 
-// .header__notification {
-//   padding: 20px;
-//   text-align: center;
-//   background-color: $dark;
-//   color: #fff;
-//   position: absolute;
-//   top: 70px;
-//   right: 20px;
-//   border-radius: 5px;
-//   width: 250px;
-//   opacity: 0;
-//   transition: all 0.2s ease-in-out;
-// }
-
-// .header__notification.show {
-//   opacity: 1;
-// }
+.header__logoutContainer {
+  padding: 0 10px;
+  display: flex;
+  .header__icon {
+    width: 20px;
+    cursor: pointer;
+  }
+}

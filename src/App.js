@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,9 +8,24 @@ import Footer from "./components/Footer/Footer";
 import CatalogPage from "./pages/catagory/catalog.pages";
 import ScrollToTop from "./components/ScrollToTop";
 import Checkout from "./pages/checkout/checkout.pages";
+import Login from "./pages/login/login.pages";
 import "./App.scss";
+import { auth } from "./firebase";
+import { useStateValue } from "./StateProvider";
 
 function App() {
+  const [{}, dispatch] = useStateValue();
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((usr) => {
+      console.log(usr);
+      dispatch({
+        type: "SET_USER",
+        user: usr,
+      });
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
@@ -22,7 +37,9 @@ function App() {
           <Route path="/checkout">
             <Checkout />
           </Route>
-          <Route path="/login"></Route>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/">
             <HomePage />
           </Route>
