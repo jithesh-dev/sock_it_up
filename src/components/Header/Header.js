@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import Logo from "../../assets/img/logo.png";
 import { ReactComponent as ShoppingCartIcon } from "../../assets/svg/shopping-cart.svg";
-import { ReactComponent as SearchIcon } from "../../assets/svg/search.svg";
+// import { ReactComponent as SearchIcon } from "../../assets/svg/search.svg";
 import { ReactComponent as AccountIcon } from "../../assets/svg/profile.svg";
 import { ReactComponent as PowerButton } from "../../assets/svg/on-off-button.svg";
 import { auth } from "../../firebase";

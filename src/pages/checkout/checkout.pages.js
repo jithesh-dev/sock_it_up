@@ -19,7 +19,7 @@ function Checkout() {
           Continue Shopping
         </Link>
         <div className="checkout__orderContainer">
-          {basket.length > 0 ? (
+          {basket?.length > 0 ? (
             basket?.map((product) => (
               <CheckoutProduct
                 key={product.id}

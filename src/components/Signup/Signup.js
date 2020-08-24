@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Signup.scss";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import { TextField } from "@material-ui/core";
 import {
@@ -14,6 +14,7 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [signupFormStatus, setSignupFormStatus] = useState("");
+  // eslint-disable-next-line
   const [{}, dispatch] = useStateValue();
   const history = useHistory();
 

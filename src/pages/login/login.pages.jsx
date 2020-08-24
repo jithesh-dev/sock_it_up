@@ -1,18 +1,15 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import "./login.style.scss";
 import { TextField } from "@material-ui/core";
-import {
-  auth,
-  googleProvider,
-  createUserProfileDocument,
-} from "../../firebase";
+import { auth } from "../../firebase";
 import Signup from "../../components/Signup/Signup";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // eslint-disable-next-line
   const [{}, dispatch] = useStateValue();
   const history = useHistory();
 

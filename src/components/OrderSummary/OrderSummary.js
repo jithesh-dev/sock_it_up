@@ -9,8 +9,8 @@ function OrderSummary() {
   const [subtotal, setSubtotal] = useState(0);
 
   useEffect(() => {
-    setItemNos(basket.reduce((a, b) => a + (b["qty"] || 0), 0));
-    setSubtotal(basket.reduce((a, b) => a + (b["qty"] * b["price"] || 0), 0));
+    setItemNos(basket?.reduce((a, b) => a + (b["qty"] || 0), 0));
+    setSubtotal(basket?.reduce((a, b) => a + (b["qty"] * b["price"] || 0), 0));
   }, [basket]);
 
   return (
